@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "calibre";
+  src: url("../Assets/fonts/CalibreRegular.otf");
+}
+@font-face {
+  font-family: "calibreBold";
+  src: url("../Assets/fonts/CalibreBold.otf");
+}
+@font-face {
+  font-family: "calibreThin";
+  src: url("../Assets/fonts/CalibreThin.otf");
+}
+
+@font-face {
+  font-family: "sfMono";
+  src: url("../Assets/fonts/SFMonoRegular.woff");
+}
+
+@font-face {
+  font-family: "sfMonoThin";
+  src: url("../Assets/fonts/SFMonoLight.woff");
+}
+
+* {
+  /* line-height: 1.1; */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-green: #64ffda;
+  --bg-green-tint: rgba(100, 255, 218, 0.1);
+  --bg-navy: #0a192f;
+  --bg-light-navy: #112240;
+  --bg-blue: #15a8cd;
+  --bg-lgray: #ccd6f6;
+  --bg-gray: #8892b0;
+  --bg-darkgray: #495670;
+  --font-cali-regular: "calibre", sans-serif, -apple-system, system-ui;
+  --font-cali-bold: "calibreBold", sans-serif, -apple-system, system-ui;
+  --font-cali-thin: "calibreThin", sans-serif, -apple-system, system-ui;
+  --font-mono: "sfMono", sans-serif, -apple-system, system-ui;
+  --font-mono-thin: "sfMonoThin", sans-serif, -apple-system, system-ui;
+  --font-heading: 64px;
+  --font-sub-heading: 48px;
+  --font-med-heading: 30px;
+  --font-para: 19px;
+  --font-note: 16px;
+  --font-bold: 700;
+  --font-semi-bold: 500;
+  --font-regular: 300;
+  --font-thin: 200;
+}
+
+html,
+body {
+  font-size: 100%;
+  background: var(--bg-navy);
+  color: var(--bg-gray);
+  font-family: var(--font-cali-regular);
+}
+
+li,
+ul {
+  list-style-type: none;
+}
+
+a,
+a:visited,
+a:focus {
+  color: var(--bg-gray);
+  text-decoration: none;
+  transition: 300ms ease;
+}
+p {
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+strong{
+  font-weight: 600;
+  color: var(--bg-lgray);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--bg-gray);
+  font-family: var(--font-mono);
+}
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.green {
+  color: var(--bg-green) !important;
+}
+.gray {
+  color: var(--bg-gray);
+}
+.lgray {
+  color: var(--bg-lgray);
+}
+
+/* Active link */
+.active {
+  color: var(--bg-green);
+}
+
+.main-container {
+  min-height: 100vh;
+
+  margin: auto;
+}
+
+.section-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+.transistion {
+  transition: 300ms ease;
+}
+
+/* scrollbar */
+
+/* Scrollbar Styles */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-darkgray) var(--bg-navy);
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-navy);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-darkgray);
+  border: 3px solid var(--bg-navy);
+  border-radius: 10px;
+}
+
+/* Media Queries */
+
+@media (min-width: 1440px) {
+  .main-container {
+    max-width: 1600px;
+    padding: 0 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+}
