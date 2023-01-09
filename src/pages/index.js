@@ -28,4 +28,4 @@ const Home = () => {
 
 export default Home;
 
-export const Head = () => <title>Gatsby Crash Course</title>
+export const Head = () => <title>idk-Mohit</title>

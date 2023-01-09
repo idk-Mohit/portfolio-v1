@@ -5,15 +5,14 @@ import JobContent from './JobContent';
 
 const InteractiveMap = () => {
     const [currentTab, setCurrentTab] = useState('0');
-    // const TabItems = useMemo(() => [...document.querySelectorAll('.tab-item')], []);
-    const TabItems = [...document.querySelectorAll('.tab-item')];
-
     const TabHandler = (e) => {
+        const TabItems = [...document.querySelectorAll('.tab-item')];
         setCurrentTab(e.target.parentElement.ariaValueText);
         TabItems.forEach((item) => {
             let btn = item.firstChild;
-            if (btn.className.includes("active"))
+            if (btn.className.includes("active")) {
                 btn.classList.remove("active");
+            }
         })
         e.target.classList.add('active');
     }

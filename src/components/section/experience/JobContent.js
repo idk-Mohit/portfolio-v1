@@ -1,27 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { jobs } from '../../../content/jobdata'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { Fade } from 'react-reveal'
 
 const JobContent = ({ currentTab }) => {
-    const [currentJob, setCurrentJob] = useState(() => { ContentHandler(currentTab) });
+    const [currentJob, setCurrentJob] = useState([]);
     function ContentHandler(currentTab) {
         const data = jobs.map((job, index) => {
             if (index === parseInt(currentTab)) {
                 return (
                     <Container key={index} className='flex-column'>
-                        <SubHeader><h3 className='lgray'>{job.title} <span className='green'>@<a href={job.link} className='green' target="_blank" rel="noopener noreferrer"> {job.linkText}</a></span></h3></SubHeader>
-                        <Duration>{job.date}</Duration>
-                        <ContentList className='flex-column'>
-                            {
-                                job.description.map((item, index) => {
-                                    return <li key={index}>
-                                        <p>{item}</p>
-                                    </li>
-                                })
-                            }
-                        </ContentList>
+                        <Fade>
+                            <SubHeader><h3 className='lgray'>{job.title} <span className='green'>@<a href={job.link} className='green' target="_blank" rel="noopener noreferrer"> {job.linkText}</a></span></h3></SubHeader>
+                            <Duration>{job.date}</Duration>
+                            <ContentList className='flex-column'>
+                                {
+                                    job.description.map((item, index) => {
+                                        return <li key={index}>
+                                            <p>{item}</p>
+                                        </li>
+                                    })
+                                }
+                            </ContentList>
+                        </Fade>
                     </Container>
                 )
             }
