@@ -13,36 +13,36 @@ const Header = () => {
             <Logo><Link to='/'><MainLogo /></Link></Logo>
             <Navigation className='flex'>
                 <li>
-                    <NavLink to='#about'>
-                        <Fade top cascade delay={200}>
+                    <NavLink to='/#about'>
+                        <Fade top cascade delay={150}>
                             <span className='transistion'>About</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='#experience'>
-                        <Fade top cascade delay={400}>
+                    <NavLink to='/#experience'>
+                        <Fade top cascade delay={300}>
                             <span className='transistion'>Experience</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='#work'>
-                        <Fade top cascade delay={600}>
+                    <NavLink to='/#work'>
+                        <Fade top cascade delay={450}>
                             <span className='transistion'>Work</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='#contact'>
-                        <Fade top cascade delay={800}>
+                    <NavLink to='/#contact'>
+                        <Fade top cascade delay={600}>
                             <span className='transistion'>Contact</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
                     <a href={Resume} target="_blank" rel="noopener noreferrer">
-                        <Fade top delay={1000}>
+                        <Fade top delay={750}>
                             <Button>Resume</Button>
                         </Fade>
                     </a>

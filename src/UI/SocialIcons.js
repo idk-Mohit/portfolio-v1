@@ -6,25 +6,25 @@ import { GitHub, Mail, Linkedin } from 'react-feather'
 const SocialIcons = () => {
     return (
         <Container className='flex'>
-            <Fade bottom delay={2000}>
+            <Fade bottom delay={1500}>
                 <List className='flex-column'>
                     <li>
                         <a href="https://github.com/idk-Mohit" target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={2200}>
+                            <Fade bottom delay={1700}>
                                 <GitHub className='socialIcons' />
                             </Fade>
                         </a>
                     </li>
                     <li>
                         <a href="mailto:mototurbo12499@gmail.com">
-                            <Fade bottom delay={2400}>
+                            <Fade bottom delay={1900}>
                                 <Mail className='socialIcons' />
                             </Fade>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/9mohit2000/" target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={2600}>
+                            <Fade bottom delay={2100}>
                                 <Linkedin className='socialIcons' />
                             </Fade>
                         </a>
