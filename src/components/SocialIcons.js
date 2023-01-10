@@ -10,23 +10,23 @@ const SocialIcons = () => {
                 <List className='flex-column'>
                     <li>
                         <a href="https://github.com/idk-Mohit" target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={4900}>
-                                <GitHub className='socialIcons' />
-                            </Fade>
+                            {/* <Fade bottom delay={4900}> */}
+                            <GitHub className='socialIcons' />
+                            {/* </Fade> */}
                         </a>
                     </li>
                     <li>
                         <a href="mailto:mototurbo12499@gmail.com">
-                            <Fade bottom delay={4800}>
-                                <Mail className='socialIcons' />
-                            </Fade>
+                            {/* <Fade bottom delay={4800}> */}
+                            <Mail className='socialIcons' />
+                            {/* </Fade> */}
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/9mohit2000/" target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={4700}>
-                                <Linkedin className='socialIcons' />
-                            </Fade>
+                            {/* <Fade bottom delay={4700}> */}
+                            <Linkedin className='socialIcons' />
+                            {/* </Fade> */}
                         </a>
                     </li>
                 </List>
