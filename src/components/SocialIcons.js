@@ -5,26 +5,26 @@ import { GitHub, Mail, Linkedin } from 'react-feather'
 
 const SocialIcons = () => {
     return (
-        <Container className='flex'>
-            <Fade bottom delay={1500}>
+        <Container>
+            <Fade bottom delay={4600}>
                 <List className='flex-column'>
                     <li>
                         <a href="https://github.com/idk-Mohit" target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={1700}>
+                            <Fade bottom delay={4900}>
                                 <GitHub className='socialIcons' />
                             </Fade>
                         </a>
                     </li>
                     <li>
                         <a href="mailto:mototurbo12499@gmail.com">
-                            <Fade bottom delay={1900}>
+                            <Fade bottom delay={4800}>
                                 <Mail className='socialIcons' />
                             </Fade>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/9mohit2000/" target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={2100}>
+                            <Fade bottom delay={4700}>
                                 <Linkedin className='socialIcons' />
                             </Fade>
                         </a>
@@ -41,7 +41,7 @@ const Container = styled.div`
     position:fixed;
     bottom: 0;
     width: 4rem;
-    left: 2rem;
+    left: 1rem;
 `
 
 const List = styled.ul`

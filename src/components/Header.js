@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import * as React from 'react';
 import Button from '../UI/Button';
 import NavLink from '../utils/ActiveNavLink';
@@ -10,39 +9,41 @@ import { Fade } from 'react-reveal';
 const Header = () => {
     return (
         <Container className='flex'>
-            <Logo><Link to='/'><MainLogo /></Link></Logo>
+            <Fade top delay={3050}>
+                <Logo><a href='/'><MainLogo /></a></Logo>
+            </Fade>
             <Navigation className='flex'>
                 <li>
                     <NavLink to='/#about'>
-                        <Fade top cascade delay={150}>
+                        <Fade top cascade delay={3150}>
                             <span className='transistion'>About</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to='/#experience'>
-                        <Fade top cascade delay={300}>
+                        <Fade top cascade delay={3300}>
                             <span className='transistion'>Experience</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to='/#work'>
-                        <Fade top cascade delay={450}>
+                        <Fade top cascade delay={3450}>
                             <span className='transistion'>Work</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to='/#contact'>
-                        <Fade top cascade delay={600}>
+                        <Fade top cascade delay={3600}>
                             <span className='transistion'>Contact</span>
                         </Fade>
                     </NavLink>
                 </li>
                 <li>
                     <a href={Resume} target="_blank" rel="noopener noreferrer">
-                        <Fade top delay={750}>
+                        <Fade top delay={3750}>
                             <Button>Resume</Button>
                         </Fade>
                     </a>

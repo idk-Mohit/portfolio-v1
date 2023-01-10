@@ -1,7 +1,8 @@
 // Global Components : 
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
-export { default as SocialIcons } from '../UI/SocialIcons'
+export { default as Loader } from './Loader'
+export { default as SocialIcons } from './SocialIcons'
 export { default as SectionHeader } from './section/SectionHeader'
 export { default as InteractiveMap } from './section/experience/InteractiveMap'
 
