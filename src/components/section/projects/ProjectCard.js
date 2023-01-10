@@ -12,7 +12,7 @@ const ProjectCard = () => {
                 <Description><p>{item.description}</p></Description>
             </Content>
             <Image>
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <a href={item.link} aria-label={`Visit my project (${item.linkText})`} target="_blank" rel="noopener noreferrer">
                     {/* <img src={} alt={item.linkText} /> */}
                 </a>
             </Image>
@@ -43,7 +43,7 @@ const Content = styled.div`
     align-items:flex-end;
     text-align:end;
 `
-const Title = styled.h3` 
+const Title = styled.h4` 
     font-size:var(--font-med-heading);
     &:hover{
         color:var(--bg-green);

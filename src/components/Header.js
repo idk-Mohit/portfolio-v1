@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <Container className='flex'>
             <Fade top delay={3050}>
-                <Logo><a href='/'><MainLogo /></a></Logo>
+                <Logo><a href='/' aria-label='Go to home page.'><MainLogo /></a></Logo>
             </Fade>
             <Navigation className='flex'>
                 <li>
@@ -42,7 +42,7 @@ const Header = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <a href={Resume} target="_blank" rel="noopener noreferrer">
+                    <a href={Resume} aria-label="Checkout my resume for qualifications." target="_blank" rel="noopener noreferrer">
                         <Fade top delay={3750}>
                             <Button>Resume</Button>
                         </Fade>
@@ -72,7 +72,6 @@ const Logo = styled.div`
     justify-content: center;
     align-items: center;
     svg {
-        /* width: 70px; */
         height: 30px;
         fill: none;
         /* user-select: none; */

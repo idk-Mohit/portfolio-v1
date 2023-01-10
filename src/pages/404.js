@@ -53,4 +53,4 @@ const Container = styled.div`
 
 
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Page Not found</title>

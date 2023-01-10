@@ -15,7 +15,7 @@ const About = () => {
                 </Fade>
                 <Fade bottom cascade delay={700}>
                     <TechUsed>
-                        <h3>Here are a few technologies I’ve been working with recently:</h3>
+                        <h2>Here are a few technologies I’ve been working with recently:</h2>
                         <ul className='grid'>
                             <li><span>JavaScript (ES6+)</span></li>
                             <li><span>React</span></li>
@@ -50,7 +50,7 @@ const Content = styled.div`
 `
 
 const TechUsed = styled.div`
-    h3{
+    h2{
         font-size: var(--font-para);
         margin-bottom: 15px;
     }

@@ -19,6 +19,7 @@ const Home = () => {
     <>
       {Loading && <Loader />}
       <Header />
+      <SocialIcons />
       <main className="main-container">
         <Hero />
         <About />
@@ -27,9 +28,6 @@ const Home = () => {
         <Contact />
       </main>
       <Footer />
-
-      {/* SocialIcons */}
-      <SocialIcons />
     </>
   )
 }

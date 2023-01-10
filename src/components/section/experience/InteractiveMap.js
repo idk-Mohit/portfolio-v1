@@ -7,7 +7,7 @@ const InteractiveMap = () => {
     const [currentTab, setCurrentTab] = useState('0');
     const TabHandler = (e) => {
         const TabItems = [...document.querySelectorAll('.tab-item')];
-        setCurrentTab(e.target.parentElement.ariaValueText);
+        setCurrentTab(e.target.parentElement.id);
         TabItems.forEach((item) => {
             let btn = item.firstChild;
             if (btn.className.includes("active")) {
@@ -21,9 +21,9 @@ const InteractiveMap = () => {
             <Tab>
                 <List className='flex-column'>
                     <Fade bottom cascade delay={500}>
-                        <li className='tab-item' aria-valuetext='0' onClick={TabHandler}><button className='active'>Shree Jewellry</button></li>
-                        <li className='tab-item' aria-valuetext='1' onClick={TabHandler}><button>Ag Consultant</button></li>
-                        <li className='tab-item' aria-valuetext='2' onClick={TabHandler}><button>Tvastra</button></li>
+                        <li className='tab-item' id='0' onClick={TabHandler}><button className='active'>Shree Jewellry</button></li>
+                        <li className='tab-item' id='1' onClick={TabHandler}><button>Ag Consultant</button></li>
+                        <li className='tab-item' id='2' onClick={TabHandler}><button>Tvastra</button></li>
                     </Fade>
                 </List>
             </Tab>

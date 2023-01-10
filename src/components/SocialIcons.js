@@ -5,28 +5,28 @@ import { GitHub, Mail, Linkedin } from 'react-feather'
 
 const SocialIcons = () => {
     return (
-        <Container>
-            <Fade bottom delay={4600}>
+        <Container className='flex'>
+            <Fade bottom delay={1500}>
                 <List className='flex-column'>
                     <li>
-                        <a href="https://github.com/idk-Mohit" target="_blank" rel="noopener noreferrer">
-                            {/* <Fade bottom delay={4900}> */}
-                            <GitHub className='socialIcons' />
-                            {/* </Fade> */}
+                        <a href="https://github.com/idk-Mohit" aria-label='Visit my Github Account for more Information.' target="_blank" rel="noopener noreferrer">
+                            <Fade bottom delay={2100}>
+                                <GitHub className='socialIcons' />
+                            </Fade>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:mototurbo12499@gmail.com">
-                            {/* <Fade bottom delay={4800}> */}
-                            <Mail className='socialIcons' />
-                            {/* </Fade> */}
+                        <a href="mailto:mototurbo12499@gmail.com" aria-label='Reach me through E-mail here.' target="_blank" rel="noopener noreferrer">
+                            <Fade bottom delay={1900}>
+                                <Mail className='socialIcons' />
+                            </Fade>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/9mohit2000/" target="_blank" rel="noopener noreferrer">
-                            {/* <Fade bottom delay={4700}> */}
-                            <Linkedin className='socialIcons' />
-                            {/* </Fade> */}
+                        <a href="https://www.linkedin.com/in/9mohit2000/" target="_blank" rel="noopener noreferrer" aria-label='Visit my LinkedIn for my career journey.'>
+                            <Fade bottom delay={1700}>
+                                <Linkedin className='socialIcons' />
+                            </Fade>
                         </a>
                     </li>
                 </List>
@@ -41,7 +41,7 @@ const Container = styled.div`
     position:fixed;
     bottom: 0;
     width: 4rem;
-    left: 1rem;
+    left: 2rem;
 `
 
 const List = styled.ul`
