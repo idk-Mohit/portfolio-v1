@@ -7,7 +7,7 @@ const ProjectCard = () => {
             <Content className='flex-column'>
                 <span className='green'>Featured Project</span>
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Title className='lgray'>{item.linkText}</Title>
+                    <Title className='lgray hover-line'>{item.linkText}</Title>
                 </a>
                 <Description><p>{item.description}</p></Description>
             </Content>

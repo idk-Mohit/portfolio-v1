@@ -1,8 +1,9 @@
 import "../styles/Reset.css"
 import "../styles/Global.css"
 import * as React from 'react';
-import { Header, Hero, Footer, About, SocialIcons, Experience, Projects, Loader, Contact } from '../components/index'
+import { Header, Footer, Hero, About, SocialIcons, Experience, Projects, Loader, Contact } from '../components/index'
 import config from 'react-reveal/globals'
+import { Seo } from "../utils/seo";
 
 
 const Home = () => {
@@ -19,7 +20,6 @@ const Home = () => {
     <>
       {Loading && <Loader />}
       <Header />
-      <SocialIcons />
       <main className="main-container">
         <Hero />
         <About />
@@ -27,6 +27,7 @@ const Home = () => {
         <Projects />
         <Contact />
       </main>
+      <SocialIcons />
       <Footer />
     </>
   )
@@ -34,4 +35,4 @@ const Home = () => {
 
 export default Home;
 
-export const Head = () => <title>idk-Mohit</title>
+export const Head = () => <Seo title="idk-Mohit" />

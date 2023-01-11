@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
-import Button from '../../UI/Button'
-import Resume from '../../Assets/Resume.pdf';
 import { Fade } from 'react-reveal';
+import Button from '../../UI/Button';
+import styled from 'styled-components';
+import Resume from '../../Assets/Resume.pdf';
 
 
 const Home = () => {

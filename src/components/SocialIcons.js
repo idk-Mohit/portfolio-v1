@@ -1,34 +1,43 @@
-import React from 'react'
-import styled from 'styled-components'
 import { Fade } from 'react-reveal'
-import { GitHub, Mail, Linkedin } from 'react-feather'
+import styled from 'styled-components'
+import socials from '../content/socials'
+import React, { useEffect, useState } from 'react'
 
 const SocialIcons = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    function DelayTime(index) {
+        if (width < 768) {
+            let temp = 100 * index;
+            return parseInt(temp + 500);
+        }
+        else {
+            let temp = 200 * index;
+            return parseInt(temp + 4500);
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+    const SocialIcons = socials.map((social, index) => {
+        return <li key={index}>
+            <a href={social.link} aria-label={social.ariaLabel} target="_blank" rel="noopener noreferrer">
+                <Fade bottom delay={DelayTime(index)} >
+                    <social.name className="socialIcons" />
+                </Fade>
+            </a>
+        </li>
+    })
     return (
-        <Container className='flex'>
-            <Fade bottom delay={1500}>
+        <Container>
+            <Fade bottom delay={4300}>
                 <List className='flex-column'>
-                    <li>
-                        <a href="https://github.com/idk-Mohit" aria-label='Visit my Github Account for more Information.' target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={2100}>
-                                <GitHub className='socialIcons' />
-                            </Fade>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:mototurbo12499@gmail.com" aria-label='Reach me through E-mail here.' target="_blank" rel="noopener noreferrer">
-                            <Fade bottom delay={1900}>
-                                <Mail className='socialIcons' />
-                            </Fade>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/9mohit2000/" target="_blank" rel="noopener noreferrer" aria-label='Visit my LinkedIn for my career journey.'>
-                            <Fade bottom delay={1700}>
-                                <Linkedin className='socialIcons' />
-                            </Fade>
-                        </a>
-                    </li>
+                    {SocialIcons}
                 </List>
             </Fade>
         </Container>
@@ -41,7 +50,14 @@ const Container = styled.div`
     position:fixed;
     bottom: 0;
     width: 4rem;
-    left: 2rem;
+    left: 1.5rem;
+
+    @media(max-width:768px){
+        position:relative;
+        margin: 2rem auto;
+        left: 0;
+        width:100%;
+    }
 `
 
 const List = styled.ul`
@@ -67,5 +83,13 @@ const List = styled.ul`
         width: 1px;
         height: 100px;
         background-color : var(--bg-gray);
+    }
+
+    @media(max-width:768px){
+        flex-direction:row !important;
+        gap:1.5rem;
+        &::after{
+            display:none;
+        }
     }
 `

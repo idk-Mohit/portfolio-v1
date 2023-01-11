@@ -11,7 +11,7 @@ const JobContent = ({ currentTab }) => {
                 return (
                     <Container key={index} className='flex-column'>
                         <Fade>
-                            <SubHeader><h3 className='lgray'>{job.title} <span className='green'>@<a href={job.link} aria-label={`Click to view my project ${job.linkText}`} className='green' target="_blank" rel="noopener noreferrer"> {job.linkText}</a></span></h3></SubHeader>
+                            <SubHeader><h3 className='lgray'>{job.title} <span className='green'>@ <a href={job.link} aria-label={`Click to view my project ${job.linkText}`} className='green hover-line' target="_blank" rel="noopener noreferrer"> {job.linkText}</a></span></h3></SubHeader>
                             <Duration>{job.date}</Duration>
                             <ContentList className='flex-column'>
                                 {

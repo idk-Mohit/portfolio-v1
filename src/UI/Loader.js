@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import LoaderIcon from '../UI/loadericon.js'
+import LoaderIcon from './loadericon.js'
 
 
 const Loader = () => {

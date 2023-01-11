@@ -32,6 +32,7 @@
   --bg-green-tint: rgba(100, 255, 218, 0.1);
   --bg-dark-navy: #020c1b;
   --bg-navy: #0a192f;
+  --bg-navy-shadow: rgba(2, 12, 27, 0.7);
   --bg-light-navy: #112240;
   --bg-blue: #15a8cd;
   --bg-lgray: #ccd6f6;
@@ -111,6 +112,31 @@ button {
 .lgray {
   color: var(--bg-lgray);
 }
+.hover-line {
+  position: relative;
+  display: inline-block;
+  line-height: inherit;
+}
+.hover-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--bg-green);
+  border-radius: 4px;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.25s;
+}
+.hover-line:hover::before {
+  scale: 1;
+}
+
+.blur {
+  filter: blur(4px) brightness(0.9);
+}
 
 /* Active link */
 .active {
@@ -119,7 +145,6 @@ button {
 
 .main-container {
   min-height: 100vh;
-
   margin: auto;
 }
 
@@ -135,7 +160,7 @@ button {
   -webkit-box-align: center;
 }
 
-.transistion {
+.transition {
   transition: 300ms ease;
 }
 
@@ -179,5 +204,8 @@ html {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (min-height: 1080px) {
+  .section-container {
+    height: 100% !important;
+  }
 }
