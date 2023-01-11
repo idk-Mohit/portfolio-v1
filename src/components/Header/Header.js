@@ -78,13 +78,17 @@ const Container = styled.header`
     }
 `
 const Logo = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
     svg {
         height: 30px;
         fill: none;
         /* user-select: none; */
+      }
+
+      @media(max-width:768px){
+        svg{
+            height: 25px;
+            margin-top: 8px;
+        }
       }
 `
 const Navigation = styled.ul`

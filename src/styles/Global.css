@@ -43,7 +43,7 @@
   --font-cali-thin: "calibreThin", sans-serif, -apple-system, system-ui;
   --font-mono: "sfMono", sans-serif, -apple-system, system-ui;
   --font-mono-thin: "sfMonoThin", sans-serif, -apple-system, system-ui;
-  --font-heading: 64px;
+  --font-heading: clamp(40px, 8vw, 80px);
   --font-sub-heading: 48px;
   --font-med-heading: 30px;
   --font-para: 19px;
@@ -152,7 +152,7 @@ button {
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
@@ -195,6 +195,8 @@ html {
 @media (max-width: 1024px) {
   .main-container {
     padding: 0 100px;
+  }
+  .section-container {
   }
 }
 

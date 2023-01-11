@@ -10,7 +10,7 @@ const About = () => {
             <Content>
                 <Fade bottom delay={500}>
                     <p>Hello! My name is Mohit and I like creating things that live on the internet. I was in computers from early age. Started programming C++ in high school, learned java in <a href="https://srmuniversity.ac.in/" target="_blank" rel="noopener noreferrer"><span className="green hover-line"> college </span></a><span> &#8212;</span> witnessing the internet growing in our daily lives, I got into Web development.<br /><br />
-                        Till date, I've dug deep into web development covering different technologies. Completed several <a href="#work"><span aria-label='Click to see my personal projects.' className="green hover-line">personal</span></a> and <a href="#" aria-label='Click to see my freelance project.' target="_blank" rel="noopener noreferrer"><span className="green hover-line"> freelance </span></a> projects working alone as well as collaborating with others.
+                        Till date, I've dug deep into web development covering different technologies. Completed several <a href="#work"><span aria-label='Click to see my personal projects.' className="green hover-line">personal</span></a> and <a href="/#" aria-label='Click to see my freelance project.' target="_blank" rel="noopener noreferrer"><span className="green hover-line"> freelance </span></a> projects working alone as well as collaborating with others.
                     </p>
                 </Fade>
                 <Fade bottom cascade delay={700}>

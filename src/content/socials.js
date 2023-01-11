@@ -1,4 +1,4 @@
-import { GitHub, Mail, Linkedin } from 'react-feather'
+import { GitHub, Email, LinkedIn } from '../components/icons/index'
 const socials = [
     {
         name: GitHub,
@@ -6,12 +6,12 @@ const socials = [
         ariaLabel: "Visit my Github Account for more Information."
     },
     {
-        name: Linkedin,
+        name: LinkedIn,
         link: "https://www.linkedin.com/in/9mohit2000/",
         ariaLabel: "Visit my LinkedIn for my career journey."
     },
     {
-        name: Mail,
+        name: Email,
         link: "mailto:mototurbo12499@gmail.com",
         ariaLabel: "Reach me through E-mail here."
     },

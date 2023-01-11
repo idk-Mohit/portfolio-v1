@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <Container className='section-container flex-column'>
             <Fade cascade delay={4100}>
-                <h6 className="green greeting">Hi, my name is</h6>
+                <span className="green greeting">Hi, my name is</span>
             </Fade>
             <div className="headings flex-column">
                 <Fade cascade delay={4200}>
@@ -17,7 +17,7 @@ const Home = () => {
                 </Fade>
                 <Fade delay={4300}>
                     <div>
-                        <h1 className="gray">I build things for the web.</h1>
+                        <h2 className="gray">I build things for the web.</h2>
                     </div>
                 </Fade>
             </div>
@@ -40,14 +40,20 @@ const Home = () => {
 export default Home
 
 const Container = styled.section`
+    height: 100vh;
     gap: 1.8rem;
     .headings{
         gap: .4rem;
         justify-content: center;
-        h1{
+        h1,h2{
             font-size: var(--font-heading);
             font-family: var(--font-cali-bold);
             letter-spacing: .5px;
+        }
+        h2{
+            font-family: var(--font-cali-regular);
+            font-weight: 800;
+            letter-spacing: none;
         }
     }
     button{

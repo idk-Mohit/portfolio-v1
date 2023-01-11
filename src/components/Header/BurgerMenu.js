@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import { X } from 'react-feather'
+import { Close } from '../icons'
 import styled from 'styled-components'
 import React from 'react'
 import BurgerMenuIcon from './BurgerMenuIcon'
@@ -20,7 +20,7 @@ const BurgerMenu = ({ burger, OpenMenu, CloseMenu }) => {
             <BurgerMenuIcon openMenu={OpenMenu} />
             <Blur show={burger} onClick={CloseMenu} />
             <InnerContainer className='transition flex-column' show={burger}>
-                <X className='close-menu' onClick={CloseMenu} />
+                <Close close={CloseMenu} />
                 <List className='flex-column'>
                     {navigationlinks}
                     <a href={Resume} onClick={CloseMenu} aria-label="Checkout my resume for qualifications." target="_blank" rel="noopener noreferrer">
@@ -97,5 +97,6 @@ const List = styled.ol`
     }
     @media(max-width:768px){
         gap: 1rem;
+        margin-bottom: 3rem;
     }
 `

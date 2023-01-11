@@ -1,10 +1,5 @@
 const links = [
     {
-        name: "Home",
-        link: "/",
-        ariaLabel: "Visit my home page.",
-    },
-    {
         name: "About",
         link: "/#about",
         ariaLabel: "This is Me!!"

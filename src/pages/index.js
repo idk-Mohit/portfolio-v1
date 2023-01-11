@@ -1,7 +1,7 @@
 import "../styles/Reset.css"
 import "../styles/Global.css"
 import * as React from 'react';
-import { Header, Footer, Hero, About, SocialIcons, Experience, Projects, Loader, Contact } from '../components/index'
+import { Header, Footer, Hero, About, Experience, Projects, Loader, Contact, SocialIcons } from '../components/index'
 import config from 'react-reveal/globals'
 import { Seo } from "../utils/seo";
 

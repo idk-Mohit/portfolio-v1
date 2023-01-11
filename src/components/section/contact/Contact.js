@@ -5,6 +5,7 @@ const Contact = () => {
     return (
         <Container className='section-container' id="contact">
             Contact
+
         </Container>
     )
 }
