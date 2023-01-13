@@ -1,30 +1,31 @@
 import { Fade } from 'react-reveal'
 import styled from 'styled-components'
 import socials from '../content/socials'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const SocialIcons = () => {
     // const isBrowser = () => typeof window !== "undefined"
-    // const [width, setWidth] = useState(null);
-    // function handleWindowSizeChange() {
-    //     setWidth(isBrowser.innerWidth);
-    // }
-    function DelayTime(index) {
-        // if (width < 768) {
-        //     let temp = 100 * index;
-        //     return parseInt(temp + 500);
-        // }
-        // else {
-        let temp = 200 * index;
-        return parseInt(temp + 4500);
-        // }
+    // console.log(isBrowser)
+    const [width, setWidth] = useState(window.innerWidth);
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
     }
-    // useEffect(() => {
-    //     isBrowser?.addEventListener('resize', handleWindowSizeChange);
-    //     return () => {
-    //         isBrowser?.removeEventListener('resize', handleWindowSizeChange);
-    //     }
-    // }, []);
+    function DelayTime(index) {
+        if (width < 768) {
+            let temp = 100 * index;
+            return parseInt(temp + 500);
+        }
+        else {
+            let temp = 200 * index;
+            return parseInt(temp + 4500);
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
     const SocialIcons = socials.map((social, index) => {
         return <li key={index}>
             <a href={social.link} aria-label={social.ariaLabel} target="_blank" rel="noopener noreferrer">
