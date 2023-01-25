@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import LoaderIcon from './loadericon.js'
 import { loaderDelay } from '../utils/config.js'
