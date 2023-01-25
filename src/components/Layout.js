@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { Footer, Header, Loader, SocialIcons } from './index'
 
 const Layout = ({ children, location }) => {
-    // let location = window.location;
     const isHome = location.pathname === '/';
     const [isLoading, setIsLoading] = useState(isHome);
 

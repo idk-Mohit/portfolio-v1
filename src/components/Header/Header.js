@@ -8,7 +8,7 @@ import Resume from '../../Assets/Resume.pdf';
 import NavLink from '../../utils/ActiveNavLink';
 import links from '../../content/links';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { loaderDelay } from '../../utils/config'
+import { isBrowser, loaderDelay } from '../../utils/config'
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
@@ -17,14 +17,18 @@ const Header = () => {
         return () => clearTimeout(timeout);
     }, []);
     const OpenMenuHandler = () => {
-        document.querySelector("body").style.overflowY = "hidden";
-        document.querySelector("#content").classList.add("blur");
+        if (isBrowser) {
+            document.querySelector("body").style.overflowY = "hidden";
+            document.querySelector("#content").classList.add("blur");
+        }
         setMenuOpen(true)
     }
     const CloseMenuHandler = () => {
         setMenuOpen(false)
-        document.querySelector("#content").classList.remove("blur");
-        document.querySelector("body").style.overflowY = "auto";
+        if (isBrowser) {
+            document.querySelector("#content").classList.remove("blur");
+            document.querySelector("body").style.overflowY = "auto";
+        }
     }
     return (
         <Container show={menuOpen}>

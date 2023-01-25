@@ -1,20 +1,18 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
     title: `idk-mohit`,
     description: `Hello, My name is Mohit. I’m a Web Developer specializing in building fast, attractive digital experiences. Currently, I’m focused on building Personal and freelance projects. And Available for opportunities.`,
-    siteUrl: `https://idk-mohit.vercel.app/`,
+    siteUrl: `https://idk-mohit.vercel.app`,
     image: 'favicon-32x32.png',
   },
   // flags: {
   //   DEV_SSR: true
   // },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", `gatsby-plugin-scroll-reveal`, {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/icon.png",
+      start_url: '/',
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
       resolve: 'gatsby-source-filesystem',
@@ -29,8 +27,7 @@ module.exports = {
       options: {
         lang: 'en'
       }
-    },
-    {
+    }, {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",

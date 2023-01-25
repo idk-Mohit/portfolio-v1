@@ -23,9 +23,9 @@ const InteractiveMap = () => {
     return (
         <Container className='grid'>
             <List className='flex-column' ref={revealTabs}>
-                <li className='tab-item' id='0' aria-hidden={currentTab === 0} onClick={TabHandler}><button className='active'>Shree Jewellry</button></li>
-                <li className='tab-item' id='1' aria-hidden={currentTab === 1} onClick={TabHandler}><button>Ag Consultant</button></li>
-                <li className='tab-item' id='2' aria-hidden={currentTab === 2} onClick={TabHandler}><button>Tvastra</button></li>
+                <li className='tab-item' id='0' aria-hidden={currentTab === 0} ><button onKeyDown={TabHandler} onClick={TabHandler} className='active'>Shree Jewellry</button></li>
+                <li className='tab-item' id='1' aria-hidden={currentTab === 1} ><button onKeyDown={TabHandler} onClick={TabHandler}>Ag Consultant</button></li>
+                <li className='tab-item' id='2' aria-hidden={currentTab === 2} ><button onKeyDown={TabHandler} onClick={TabHandler}>Tvastra</button></li>
             </List>
             <JobContent currentTab={currentTab} />
         </Container>
