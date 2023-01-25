@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { Fade } from 'react-reveal'
+import sr, { srConfig } from '../../utils/srConfig';
 
 const SectionHeader = ({ children, num }) => {
+    const revealHeader = useRef(null);
+    useEffect(() => {
+        sr.reveal(revealHeader.current, srConfig(300))
+    }, [])
     return (
-        <Container val={num}>
-            <Fade bottom delay={200}>
-                <h1 className='flex'>{children}</h1>
-            </Fade>
-        </Container>
+        <Container val={num} ref={revealHeader}>
+            <h1 className='flex'>{children}</h1>
+        </Container >
     )
 }
 
@@ -17,6 +19,7 @@ export default SectionHeader
 const Container = styled.div`
     width: 100%;
     h1{
+        min-width: 400px;
         align-items: center;
         font-size: var(--font-med-heading);
         font-family: var(--font-cali-regular);
@@ -25,6 +28,10 @@ const Container = styled.div`
         position:relative;
         width:100%;
         white-space: nowrap;
+
+        @media(max-width:768px){
+            min-width: auto;
+        }
         &:before{
             bottom: 2px;
             counter-increment: ${props => `section ${props.val}`};

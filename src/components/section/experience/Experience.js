@@ -5,7 +5,7 @@ import { SectionHeader, InteractiveMap } from '../../index'
 const Experience = () => {
     return (
         <Container className='section-container flex-column' id='experience'>
-                <SectionHeader num={2}>Experience</SectionHeader>
+            <SectionHeader num={2}>Experience</SectionHeader>
             <InteractiveMap />
         </Container>
     )
@@ -15,4 +15,5 @@ export default Experience
 
 const Container = styled.section`
     gap:2rem;
+    max-width: 700px;
 `

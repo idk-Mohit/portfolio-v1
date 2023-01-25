@@ -1,3 +1,5 @@
+@import url("./TransitionStyles.css");
+
 @font-face {
   font-family: "calibre";
   src: url("../Assets/fonts/CalibreRegular.otf");
@@ -28,12 +30,12 @@
 }
 
 :root {
-  --bg-green: #64ffda;
+  --bg-green: rgb(100, 255, 218);
   --bg-green-tint: rgba(100, 255, 218, 0.1);
   --bg-dark-navy: #020c1b;
   --bg-navy: #0a192f;
   --bg-navy-shadow: rgba(2, 12, 27, 0.7);
-  --bg-light-navy: #112240;
+  --bg-light-navy: rgb(17, 34, 64);
   --bg-blue: #15a8cd;
   --bg-lgray: #ccd6f6;
   --bg-gray: #8892b0;
@@ -46,12 +48,15 @@
   --font-heading: clamp(40px, 8vw, 80px);
   --font-sub-heading: 48px;
   --font-med-heading: 30px;
-  --font-para: 19px;
+  --font-para: clamp(17px, 19px);
   --font-note: 16px;
   --font-bold: 700;
   --font-semi-bold: 500;
   --font-regular: 300;
   --font-thin: 200;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --shadow: 0 10px 30px -15px var(--bg-navy-shadow);
+  --shadow-hover: 0 20px 30px -15px var(--bg-navy-shadow);
 }
 
 html,
@@ -89,6 +94,17 @@ button {
   border: none;
   color: var(--bg-gray);
   font-family: var(--font-mono);
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 0 150px;
+}
+main .fillHeight {
+  padding: 0 150px;
 }
 
 .flex {
@@ -142,6 +158,16 @@ button {
 .active {
   color: var(--bg-green);
 }
+.feather {
+  width: 20px;
+  height: 20px;
+  transition: transform 300ms ease;
+}
+.feather:hover {
+  color: var(--bg-green);
+  transform: translateY(-5px);
+  transition: transform 300ms ease;
+}
 
 .main-container {
   min-height: 100vh;
@@ -152,7 +178,7 @@ button {
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  /* height: 100vh; */
+  height: 100vh;
   min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
@@ -186,6 +212,12 @@ html {
 /* Media Queries */
 
 @media (min-width: 1440px) {
+  main {
+    padding: 200px 100px;
+  }
+  .fillHeight {
+    padding: 0 100px;
+  }
   .main-container {
     max-width: 1600px;
     padding: 0 150px;
@@ -196,13 +228,28 @@ html {
   .main-container {
     padding: 0 100px;
   }
-  .section-container {
-  }
+  /* .section-container {
+  } */
 }
 
 @media (max-width: 768px) {
+  main {
+    padding: 150px 50px;
+  }
+  .fillHeight {
+    padding: 0 50px;
+  }
   .main-container {
     padding: 0 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 125px 25px;
+  }
+  .fillHeight {
+    padding: 0 25px;
   }
 }
 

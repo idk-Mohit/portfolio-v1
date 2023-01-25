@@ -1,55 +1,79 @@
 import BurgerMenu from './BurgerMenu';
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
-import { Fade } from 'react-reveal';
+import React, { useState, useEffect } from 'react';
 import Button from '../../UI/Button';
 import styled from 'styled-components';
 import MainLogo from '../../UI/MainLogo';
 import Resume from '../../Assets/Resume.pdf';
 import NavLink from '../../utils/ActiveNavLink';
 import links from '../../content/links';
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { loaderDelay } from '../../utils/config'
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        const timeout = setTimeout(() => setIsMounted(true), 100);
+        return () => clearTimeout(timeout);
+    }, []);
     const OpenMenuHandler = () => {
         document.querySelector("body").style.overflowY = "hidden";
-        document.querySelector(".main-container").classList.add("blur");
+        document.querySelector("#content").classList.add("blur");
         setMenuOpen(true)
     }
     const CloseMenuHandler = () => {
         setMenuOpen(false)
-        document.querySelector(".main-container").classList.remove("blur");
+        document.querySelector("#content").classList.remove("blur");
         document.querySelector("body").style.overflowY = "auto";
     }
-    const navigationlinks = links.map((item, index) => {
-        let temp = 150;
-        return <li key={index}>
-            <NavLink to={item.link}>
-                <Fade top cascade delay={3000 + (temp * 1)}>
-                    <span className='transition'>{item.name}</span>
-                </Fade>
-            </NavLink>
-        </li>
-    })
     return (
         <Container show={menuOpen}>
             <nav className='flex'>
-                <Fade top delay={3050}>
-                    <Logo><Link to='/' aria-label='Go to home page.'><MainLogo /></Link></Logo>
-                </Fade>
+                <TransitionGroup component={null}>
+                    {isMounted && (
+                        <CSSTransition classNames="fade" timeout={loaderDelay}>
+                            <Link to='/' aria-label='Go to home page.'><MainLogo /></Link>
+                        </CSSTransition>
+                    )}
+                </TransitionGroup>
                 {/* Desktop */}
                 <Navigation className='flex'>
-                    {navigationlinks}
-                    <li>
-                        <a href={Resume} aria-label="Checkout my resume for qualifications." target="_blank" rel="noopener noreferrer">
-                            <Fade top delay={3750}>
-                                <Button>Resume</Button>
-                            </Fade>
-                        </a>
-                    </li>
+                    <TransitionGroup component={null}>
+                        {isMounted &&
+                            links.map((item, index) => (
+                                <CSSTransition key={index} classNames="fadedown" timeout={loaderDelay}>
+                                    <div style={{ transitionDelay: `${index + 1}00ms` }}>
+                                        <NavLink to={item.link} aria-label={item.ariaLabel}>
+                                            <span>{item.name}</span>
+                                        </NavLink>
+                                    </div>
+                                </CSSTransition>
+                            ))
+                        }
+                    </TransitionGroup>
+                    <TransitionGroup component={null}>
+                        {isMounted &&
+                            <CSSTransition classNames="fadedown" timeout={loaderDelay}>
+                                <div style={{ transitionDelay: `${links.length * 100}ms` }}>
+                                    <a href={Resume} aria-label="Checkout my Resume">
+                                        <Button>
+                                            Resume
+                                        </Button>
+                                    </a>
+                                </div>
+                            </CSSTransition>}
+                    </TransitionGroup>
                 </Navigation>
                 {/* Mobile */}
-                <BurgerMenu burger={menuOpen} OpenMenu={OpenMenuHandler} CloseMenu={CloseMenuHandler} />
+                <BurgerMenuContainer>
+                    <TransitionGroup>
+                        {isMounted &&
+                            <CSSTransition classNames="fade" timeout={loaderDelay}>
+                                <BurgerMenu burger={menuOpen} OpenMenu={OpenMenuHandler} CloseMenu={CloseMenuHandler} />
+                            </CSSTransition>
+                        }
+                    </TransitionGroup>
+                </BurgerMenuContainer>
             </nav>
         </Container >
     )
@@ -77,23 +101,17 @@ const Container = styled.header`
         height: 70px;
     }
 `
-const Logo = styled.div`
-    svg {
-        height: 30px;
-        fill: none;
-        /* user-select: none; */
-      }
-
-      @media(max-width:768px){
-        svg{
-            height: 25px;
-            margin-top: 8px;
-        }
-      }
-`
 const Navigation = styled.ul`
     align-items:center;
     gap: 1.5rem;
+    a{
+        &:hover,
+        &:focus {
+            svg {
+                fill: var(--green-tint);
+            }
+        }
+    }
 
     span{
         font-size: 13px;
@@ -104,5 +122,11 @@ const Navigation = styled.ul`
     }
     @media(max-width:768px){
         display: none !important;
+    }
+`
+const BurgerMenuContainer = styled.div`
+    display: none;
+    @media(max-width:768px){
+        display: block !important;
     }
 `

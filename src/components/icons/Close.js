@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Close = ({ close }) => {
+const IconClose = ({ close }) => {
     return (
         <Container className='close-menu' onClick={close} >
             <svg
@@ -21,8 +21,12 @@ const Close = ({ close }) => {
     )
 }
 
-export default Close
+export default IconClose
 
 const Container = styled.div`
     cursor: pointer;
+    svg{
+        width: inherit;
+        height: inherit;
+    }
 `

@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import LoaderIcon from './loadericon.js'
+import { loaderDelay } from '../utils/config.js'
 
-
-const Loader = () => {
+const Loader = ({ finishLoading }) => {
     useEffect(() => {
+        const timeout = setTimeout(() => finishLoading(), loaderDelay);
         document.querySelector("body").style.overflowY = "hidden";
         return () => {
             document.querySelector("body").style.overflowY = "auto";
+            clearTimeout(timeout);
         }
-    }, [])
+    }, []);
     return (
         <Container className='grid'>
             <LoaderIcon />

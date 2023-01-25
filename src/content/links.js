@@ -1,20 +1,20 @@
 const links = [
     {
         name: "About",
-        link: "/#about",
+        link: "#about",
         ariaLabel: "This is Me!!"
     }, {
         name: "Experience",
-        link: "/#experience",
+        link: "#experience",
         ariaLabel: "Checkout my experience."
     },
     {
         name: "Work",
-        link: "/#work",
+        link: "#work",
         ariaLabel: "Click to see my work.",
     }, {
         name: "Contact",
-        link: "/#contact",
+        link: "#contact",
         ariaLabel: "Here are my social, feel free to drop a message."
     },
 ]

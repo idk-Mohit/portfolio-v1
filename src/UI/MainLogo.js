@@ -1,8 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const MainLogo = () => {
     return (
-        <>
+        <Container>
             <svg viewBox="0 0 500 250">
                 <polygon points="118 253,137 193,4 254" fill="#a32a60">
                 </polygon>
@@ -42,11 +43,24 @@ const MainLogo = () => {
                 <polygon points="348 251,462 251,440 187" fill="#d12c2a">
                 </polygon>
             </svg>
-        </>
+        </Container>
     )
 }
 
 export default MainLogo
 
+const Container = styled.div`
+    svg {
+        height: 30px;
+        fill: none;
+        /* user-select: none; */
+      }
 
+      @media(max-width:768px){
+        svg{
+            height: 25px;
+            margin-top: 8px;
+        }
+      }
+`
 // SVG from https://codepen.io/wmine

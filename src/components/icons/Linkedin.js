@@ -1,8 +1,8 @@
 import React from 'react';
 
-const IconLinkedin = ({ name }) => (
+const IconLinkedin = () => (
     <svg
-        className={name}
+        className="feather feather-anchor linkedin"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
         viewBox="0 0 24 24"

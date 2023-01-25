@@ -14,4 +14,7 @@ const Projects = () => {
 
 export default Projects
 
-const Container = styled.section``
+const Container = styled.section`
+    /* min-height: auto !important; */
+    height: auto !important;
+`

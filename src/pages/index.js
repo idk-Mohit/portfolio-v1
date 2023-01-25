@@ -1,38 +1,33 @@
 import "../styles/Reset.css"
 import "../styles/Global.css"
-import * as React from 'react';
-import { Header, Footer, Hero, About, Experience, Projects, Loader, Contact, SocialIcons } from '../components/index'
-import config from 'react-reveal/globals'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Hero, About, Experience, Projects, Contact, Layout } from '../components/index'
 import { Seo } from "../utils/seo";
+import styled from "styled-components";
 
 
-const Home = () => {
-  const [Loading, setLoading] = React.useState(true);
-  config({ ssrFadeout: true });
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, [])
-
-  return (
-    <>
-      {Loading && <Loader />}
-      <Header />
-      <main className="main-container">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <SocialIcons />
-      <Footer />
-    </>
-  )
-}
+const Home = ({ location }) => (
+  <Layout location={location}>
+    <Container className="fillHeight">
+      <Hero />
+      <About />
+      <Experience />
+      {/* <Featured /> */}
+      <Projects />
+      <Contact />
+    </Container>
+  </Layout>
+)
 
 export default Home;
 
+Home.propTypes = {
+  location: PropTypes.object.isRequired,
+};
+
 export const Head = () => <Seo title="idk-Mohit" />
+
+const Container = styled.main`
+  counter-reset: section;
+`

@@ -29,7 +29,8 @@ module.exports = {
       options: {
         lang: 'en'
       }
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",

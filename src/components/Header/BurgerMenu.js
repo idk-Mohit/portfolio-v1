@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import { Close } from '../icons'
+import { Icons } from '../icons'
 import styled from 'styled-components'
 import React from 'react'
 import BurgerMenuIcon from './BurgerMenuIcon'
@@ -16,29 +16,24 @@ const BurgerMenu = ({ burger, OpenMenu, CloseMenu }) => {
         </li>
     })
     return (
-        <Container>
+        <>
             <BurgerMenuIcon openMenu={OpenMenu} />
             <Blur show={burger} onClick={CloseMenu} />
-            <InnerContainer className='transition flex-column' show={burger}>
-                <Close close={CloseMenu} />
+            <Navigation className='transition flex-column' show={burger}>
+                <Icons name='close' close={CloseMenu} />
                 <List className='flex-column'>
                     {navigationlinks}
                     <a href={Resume} onClick={CloseMenu} aria-label="Checkout my resume for qualifications." target="_blank" rel="noopener noreferrer">
                         <Button>Resume</Button>
                     </a>
                 </List>
-            </InnerContainer>
-        </Container>
+            </Navigation>
+        </>
     )
 }
 
 export default BurgerMenu
 
-const Container = styled.div`
-    @media(min-width:769px){
-        display: none !important;
-    }
-`
 const Blur = styled.div`
     position: fixed;
     top: 0;
@@ -50,7 +45,7 @@ const Blur = styled.div`
     display: ${props => (props.show ? 'block' : 'none')};
     z-index: 500;
 `
-const InnerContainer = styled.div`
+const Navigation = styled.div`
     position: fixed;
     top: 0;
     right: 0px;
