@@ -228,8 +228,6 @@ html {
   .main-container {
     padding: 0 100px;
   }
-  /* .section-container {
-  } */
 }
 
 @media (max-width: 768px) {
@@ -241,6 +239,10 @@ html {
   }
   .main-container {
     padding: 0 50px;
+  }
+  .section-container{
+    margin-top: 4rem;
+    padding-top: 100px;
   }
 }
 

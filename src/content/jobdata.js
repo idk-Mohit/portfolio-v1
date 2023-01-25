@@ -2,7 +2,7 @@ export const jobs = [
     {
         name: 'jewelry',
         title: 'Front-end Developer',
-        link: "#",
+        link: "https://shree-jewellers.netlify.app/",
         linkText: 'Shree Jewellers',
         date: 'March - April 2022',
         description: [
@@ -15,7 +15,7 @@ export const jobs = [
     {
         name: 'agconsultant',
         title: 'Backend Developer',
-        link: "#",
+        link: "https://agconsultancy.cyclic.app/",
         linkText: 'AG Consultant',
         date: 'August - October 2021',
         description: [
@@ -28,7 +28,7 @@ export const jobs = [
     {
         name: 'tvastra',
         title: 'Full Stack Developer',
-        link: "#",
+        link: "https://tvastrahealthcare.cyclic.app/",
         linkText: 'Training',
         date: 'April - May 2021',
         description: [

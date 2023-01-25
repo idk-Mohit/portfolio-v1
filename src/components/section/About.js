@@ -13,7 +13,7 @@ const About = () => {
         sr.reveal(revealtech.current, srConfig());
     }, [])
     return (
-        <Container className='section-container flex-column' id="about" ref={revealContainer}>
+        <Container id="about" className='section-container flex-column' ref={revealContainer}>
             <SectionHeader num={1}>About Me</SectionHeader>
             <Content ref={revealContent}>
                 <p>Hello! My name is Mohit and I like creating things that live on the internet. I was in computers from early age. Started programming C++ in high school, learned java in <a href="https://srmuniversity.ac.in/" target="_blank" rel="noopener noreferrer"><span className="green hover-line"> college </span></a><span> &#8212;</span> witnessing the internet growing in our daily lives, I got into Web development.<br /><br />

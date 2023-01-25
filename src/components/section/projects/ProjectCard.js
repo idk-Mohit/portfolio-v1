@@ -39,8 +39,8 @@ const ProjectCard = () => {
                     <div className="image-wrapper">
                         <img src={item.image} alt={item.linkText} />
                         <picture>
-                            <source media="(min-width: 1090px)" srcset={item.image} sizes="" />
-                            <source media="(max-width: 1080px)" srcset={item.smallImage} sizes="" />
+                            <source media="(min-width: 1090px)" srcSet={item.image} sizes="" />
+                            <source media="(max-width: 1080px)" srcSet={item.smallImage} sizes="" />
                             <img src={item.image} alt={item.linkText} />
                         </picture>
                     </div>
@@ -57,7 +57,7 @@ const ProjectCard = () => {
 
 export default ProjectCard
 
-const Container = styled.div`
+const Container = styled.ul`
     margin-top: 1rem;
     width: 100%;
 `
@@ -153,6 +153,7 @@ const Description = styled.div`
     @media(max-width:768px){
         background: transparent;
         box-shadow: none;
+        color: var(--bg-lgray);
         p{
             padding: 0;
         }
@@ -221,4 +222,9 @@ const Tech = styled.ul`
 const FooterLinks = styled.ul`
     gap: 1rem;
     margin-top: 10px;
+    @media(max-width:768px){
+        .feather{
+            color:var(--bg-green);
+        }
+    }
 `

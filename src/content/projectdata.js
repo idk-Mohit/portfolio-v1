@@ -1,5 +1,4 @@
 import { AmazonImage, AmazonIamgeSmall, TvastraImage, TvastraImageSmall, ShreeJewellerImage, ShreeJewellerImageSmall } from '../images/index'
-console.log(AmazonImage)
 
 export const Projects = [
     {

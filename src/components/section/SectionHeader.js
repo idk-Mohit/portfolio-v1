@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import sr, { srConfig } from '../../utils/srConfig';
 
-const SectionHeader = ({ children, num }) => {
+const SectionHeader = ({ children, num, id }) => {
     const revealHeader = useRef(null);
     useEffect(() => {
         sr.reveal(revealHeader.current, srConfig(300))
@@ -48,6 +48,7 @@ const Container = styled.div`
             position: relative;
             top: -5px;
             width: 300px;
+            max-width:300px;
             height: 1px;
             margin-left: 20px;
             background-color: var(--bg-darkgray);

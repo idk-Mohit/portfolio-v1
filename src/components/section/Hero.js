@@ -41,8 +41,8 @@ const Home = () => {
 export default Home
 
 const Container = styled.section`
-    height: 100vh;
-    min-height: 100vh;
+    margin: 0 auto !important;
+    padding-top: 0 !important;
     gap: 1.4rem;
     justify-content: center;
     h1,h2{
