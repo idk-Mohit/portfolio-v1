@@ -23,6 +23,17 @@ module.exports = {
       __key: "images"
     },
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+          },
+          `gatsby-remark-lazy-load`,
+        ]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
         lang: 'en'

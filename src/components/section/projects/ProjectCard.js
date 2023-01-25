@@ -37,11 +37,10 @@ const ProjectCard = () => {
             <ImageContainer className='project-image'>
                 <a className='flex' href={item.link} aria-label={`Visit my project (${item.linkText})`} target="_blank" rel="noopener noreferrer">
                     <div className="image-wrapper">
-                        <img src={item.image} alt={item.linkText} />
                         <picture>
-                            <source media="(min-width: 1090px)" srcSet={item.image} sizes="" />
-                            <source media="(max-width: 1080px)" srcSet={item.smallImage} sizes="" />
-                            <img src={item.image} alt={item.linkText} />
+                            <source media="(min-width: 1090px)" srcSet={item.image} />
+                            <source media="(max-width: 1080px)" srcSet={item.smallImage} />
+                            <img className='lazyload' srcSet={item.image} alt={item.linkText} />
                         </picture>
                     </div>
                 </a>
