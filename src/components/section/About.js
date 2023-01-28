@@ -17,7 +17,7 @@ const About = () => {
             <SectionHeader num={1}>About Me</SectionHeader>
             <Content ref={revealContent}>
                 <p>Hello! My name is Mohit and I like creating things that live on the internet. I was in computers from early age. Started programming C++ in high school, learned java in <a href="https://srmuniversity.ac.in/" target="_blank" rel="noopener noreferrer"><span className="green hover-line"> college </span></a><span> &#8212;</span> witnessing the internet growing in our daily lives, I got into Web development.<br /><br />
-                    Till date, I've dug deep into web development covering different technologies. Completed several <a href="#work"><span aria-label='Click to see my personal projects.' className="green hover-line">personal</span></a> and <a href="/#" aria-label='Click to see my freelance project.' target="_blank" rel="noopener noreferrer"><span className="green hover-line"> freelance </span></a> projects working alone as well as collaborating with others.
+                    Till date, I've dug deep into web development covering different technologies. Completed several <a href="#work"><span aria-label='Click to see my personal projects.' className="green hover-line">personal</span></a> and <a href="https://agconsultancy.cyclic.app/" aria-label='Click to see my freelance project.' target="_blank" rel="noopener noreferrer"><span className="green hover-line"> freelance </span></a> projects working alone as well as collaborating with others.
                 </p>
                 <TechUsed>
                     <h2>Here are a few technologies I’ve been working with recently:</h2>
