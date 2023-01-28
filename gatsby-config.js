@@ -5,9 +5,9 @@ module.exports = {
     siteUrl: `https://idk-mohit.vercel.app`,
     image: 'favicon-32x32.png',
   },
-  // flags: {
-  //   DEV_SSR: true
-  // },
+  flags: {
+    DEV_SSR: true
+  },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", `gatsby-plugin-scroll-reveal`, {
     resolve: 'gatsby-plugin-manifest',
     options: {
@@ -22,6 +22,7 @@ module.exports = {
       },
       __key: "images"
     },
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -45,5 +46,5 @@ module.exports = {
         "path": "./src/pages/"
       },
       __key: "pages"
-    }]
+    }],
 };

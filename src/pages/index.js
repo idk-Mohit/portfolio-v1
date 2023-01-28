@@ -19,7 +19,6 @@ const Home = ({ location }) => (
       <Suspense fallback={<LoaderIcon />}>
         <About />
         <Experience />
-        {/* <Featured /> */}
         <Projects />
         <Contact />
       </Suspense>
