@@ -59,7 +59,7 @@ const Header = () => {
                         {isMounted &&
                             <CSSTransition classNames="fadedown" timeout={loaderDelay}>
                                 <div style={{ transitionDelay: `${links.length * 100}ms` }}>
-                                    <a href={Resume} aria-label="Checkout my Resume">
+                                    <a href={Resume} target="_blank" rel="noopener noreferrer" aria-label="Checkout my Resume">
                                         <Button>
                                             Resume
                                         </Button>
