@@ -18,7 +18,7 @@ const Container = styled.button`
   font-size: 14px;
   color:var(--bg-green);
   border-radius: 4px;
-  font-family: "Jet Brains Mono";
+  font-family: var(--font-mono);
 
   &:hover{
     cursor: pointer;
