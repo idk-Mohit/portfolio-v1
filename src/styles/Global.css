@@ -4,10 +4,12 @@
   font-family: "calibre";
   src: url("../Assets/fonts/CalibreRegular.otf");
 }
+
 @font-face {
   font-family: "calibreBold";
   src: url("../Assets/fonts/CalibreBold.otf");
 }
+
 @font-face {
   font-family: "calibreThin";
   src: url("../Assets/fonts/CalibreThin.otf");
@@ -79,6 +81,7 @@ a:focus {
   text-decoration: none;
   transition: 300ms ease;
 }
+
 p {
   line-height: 1.5;
   letter-spacing: 0.3px;
@@ -122,6 +125,7 @@ main {
   min-height: 100vh;
   padding: 0 150px;
 }
+
 main .fillHeight {
   padding: 0 150px;
 }
@@ -129,6 +133,7 @@ main .fillHeight {
 .flex {
   display: flex;
 }
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -141,17 +146,21 @@ main .fillHeight {
 .green {
   color: var(--bg-green) !important;
 }
+
 .gray {
   color: var(--bg-gray);
 }
+
 .lgray {
   color: var(--bg-lgray);
 }
+
 .hover-line {
   position: relative;
   display: inline-block;
   line-height: inherit;
 }
+
 .hover-line::before {
   content: "";
   position: absolute;
@@ -165,6 +174,7 @@ main .fillHeight {
   transform-origin: left;
   transition: scale 0.25s;
 }
+
 .hover-line:hover::before {
   scale: 1;
 }
@@ -177,11 +187,13 @@ main .fillHeight {
 .active {
   color: var(--bg-green);
 }
+
 .feather {
   width: 20px;
   height: 20px;
   transition: transform 300ms ease;
 }
+
 .feather:hover {
   color: var(--bg-green);
   transform: translateY(-5px);
@@ -216,12 +228,15 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--bg-darkgray) var(--bg-navy);
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-navy);
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-darkgray);
   border: 3px solid var(--bg-navy);
@@ -234,9 +249,11 @@ html {
   main {
     padding: 200px 100px;
   }
+
   .fillHeight {
     padding: 0 100px;
   }
+
   .main-container {
     max-width: 1600px;
     padding: 0 150px;
@@ -253,12 +270,15 @@ html {
   main {
     padding: 150px 50px;
   }
+
   .fillHeight {
     padding: 0 50px;
   }
+
   .main-container {
     padding: 0 50px;
   }
+
   .section-container {
     margin-top: 4rem;
     padding-top: 100px;
@@ -269,6 +289,7 @@ html {
   main {
     padding: 125px 25px;
   }
+
   .fillHeight {
     padding: 0 25px;
   }

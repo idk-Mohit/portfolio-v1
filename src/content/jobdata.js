@@ -1,42 +1,55 @@
 export const jobs = [
-    {
-        name: 'jewelry',
-        title: 'Front-end Developer',
-        link: "https://shree-jewellers.netlify.app/",
-        linkText: 'Shree Jewellers',
-        date: 'March - April 2022',
-        description: [
-            'Communicated with the client to understand the requirements.',
-            'Built trending UI, utilizing ReactJs, StyledComponents, MaterailUI and Swiper.',
-            'Implemented cross-browser compatibility and responsivesness using Flex and Grid Framework.',
-            'Kept up with best practices to provide an optimal experience for customers.'
-        ]
-    },
-    {
-        name: 'agconsultant',
-        title: 'Backend Developer',
-        link: "https://agconsultancy.cyclic.app/",
-        linkText: 'AG Consultant',
-        date: 'August - October 2021',
-        description: [
-            'Wrote clean, scalable, and comprehensible code.',
-            'Built several REST APIs covering login, signup and User Panel Requests and Responses.',
-            'Performed tests and troubleshooting on REST APIs.',
-            'Also, collaborated with the front-end team and built the user panel and some other UI components.'
-        ]
-    },
-    {
-        name: 'tvastra',
-        title: 'Full Stack Developer',
-        link: "https://tvastrahealthcare.cyclic.app/",
-        linkText: 'Training',
-        date: 'April - May 2021',
-        description: [
-            'Developed and implemented scalable back-end, employing MongoDb, ExpressJs and PassportJs.',
-            'Built User Panel and REST APIs performing several functions throughout the website.',
-            'Used best practices for better SEO, less buffering and understandable code.',
-            'Developed stunning front-end UI, covering GRID, Carousels, and Accordions.',
-            'Worked closely with other front-end team members to develop, document and manage the website using JavaScript and EJS Template.',
-        ]
-    }
-]
+  {
+    name: "exalens",
+    title: "Front-end Engineer",
+    link: "https://www.exalens.com/",
+    linkText: "EXALENS",
+    date: "March - December 2023",
+    description: [
+      "Engineered real-time cybersecurity dashboards with React, D3.js (custom charts), and Devextreme, enabling proactive threat analysis via interactive, high-performance visualizations.",
+      "Optimized data visualization performance for massive datasets, significantly reducing rendering time and improving responsiveness through code splitting and other techniques.",
+      "Built custom, interactive D3 charts (line, scatter, area) with zooming, panning, dynamic axes, and time-range selection for flexible exploration of diverse datasets.",
+      "Adepts at web performance optimization for large datasets in React, proficient in Context API and diverse optimization techniques, ensuring smooth user experience and efficient data visualization.",
+    ],
+  },
+  {
+    name: "jewelry",
+    title: "Front-end Developer",
+    link: "https://shree-jewellers.netlify.app/",
+    linkText: "Shree Jewellers",
+    date: "March - April 2022",
+    description: [
+      "Communicated with the client to understand the requirements.",
+      "Built trending UI, utilizing ReactJs, StyledComponents, MaterailUI and Swiper.",
+      "Implemented cross-browser compatibility and responsivesness using Flex and Grid Framework.",
+      "Kept up with best practices to provide an optimal experience for customers.",
+    ],
+  },
+  {
+    name: "agconsultant",
+    title: "Backend Developer",
+    link: "https://agconsultancy.cyclic.app/",
+    linkText: "AG Consultant",
+    date: "August - October 2021",
+    description: [
+      "Wrote clean, scalable, and comprehensible code.",
+      "Built several REST APIs covering login, signup and User Panel Requests and Responses.",
+      "Performed tests and troubleshooting on REST APIs.",
+      "Also, collaborated with the front-end team and built the user panel and some other UI components.",
+    ],
+  },
+  {
+    name: "tvastra",
+    title: "Full Stack Developer",
+    link: "https://tvastrahealthcare.cyclic.app/",
+    linkText: "Training",
+    date: "April - May 2021",
+    description: [
+      "Developed and implemented scalable back-end, employing MongoDb, ExpressJs and PassportJs.",
+      "Built User Panel and REST APIs performing several functions throughout the website.",
+      "Used best practices for better SEO, less buffering and understandable code.",
+      "Developed stunning front-end UI, covering GRID, Carousels, and Accordions.",
+      "Worked closely with other front-end team members to develop, document and manage the website using JavaScript and EJS Template.",
+    ],
+  },
+];

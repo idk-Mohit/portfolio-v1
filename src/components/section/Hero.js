@@ -16,15 +16,17 @@ const Home = () => {
   const three = <h2 className="gray">I build things for the web.</h2>;
   const four = (
     <Brief>
-      I’m a Web Developer specializing in building fast, attractive digital
-      experiences. Currently, I’m working as a Frontend developer at&nbsp;
+      Passionate frontend developer adept at creating lightning-fast, visually
+      appealing web experiences. Skilled in translating designs into clean,
+      efficient code, solving complex UI challenges. Currently, I’m working as a
+      Frontend Engineer at&nbsp;
       <a
         href="https://www.exalens.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <span className="green hover-line">Exalens.</span>
-      </a>
+      </a>{" "}
     </Brief>
   );
   const five = (
