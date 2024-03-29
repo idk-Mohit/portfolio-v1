@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { SectionHeader } from "../index";
 import styled from "styled-components";
 import sr, { srConfig } from "../../utils/srConfig";
+import tech from "../../content/tech";
 
 const About = () => {
   const revealContainer = useRef(null);
@@ -59,33 +60,11 @@ const About = () => {
         <TechUsed>
           <h2>Here are a few technologies I’ve been working with recently:</h2>
           <ul className="grid" ref={revealtech}>
-            <li>
-              <span>JavaScript (ES6+)</span>
-            </li>
-            <li>
-              <span>React</span>
-            </li>
-            <li>
-              <span>Redux</span>
-            </li>
-            <li>
-              <span>Node.js</span>
-            </li>
-            <li>
-              <span>MongoDB</span>
-            </li>
-            <li>
-              <span>Git</span>
-            </li>
-            <li>
-              <span>TypeScript</span>
-            </li>
-            <li>
-              <span>D3.js</span>
-            </li>
-            <li>
-              <span>Recoil</span>
-            </li>
+            {tech.map((t, index) => (
+              <li key={index}>
+                <span>{t}</span>
+              </li>
+            ))}
           </ul>
         </TechUsed>
       </Content>
@@ -118,11 +97,11 @@ const Content = styled.div`
 const TechUsed = styled.div`
   h2 {
     font-size: var(--font-para);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
   margin: 20px 0;
   ul {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0.8rem;
   }
 
