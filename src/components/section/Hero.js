@@ -18,15 +18,8 @@ const Home = () => {
     <Brief>
       Passionate frontend developer adept at creating lightning-fast, visually
       appealing web experiences. Skilled in translating designs into clean,
-      efficient code, solving complex UI challenges. Currently, I’m working as a
-      Frontend Engineer at&nbsp;
-      <a
-        href="https://www.exalens.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span className="green hover-line">Exalens.</span>
-      </a>{" "}
+      efficient code, solving complex UI challenges.{" "}
+      <strong>Open for Work</strong>.
     </Brief>
   );
   const five = (
