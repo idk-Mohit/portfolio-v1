@@ -25,11 +25,11 @@ export const Projects = [
     linkText: "Tvastra Healthcare",
     image: TvastraImage,
     smallImage: TvastraImageSmall,
-    link: "https://tvastrahealthcare.cyclic.app/",
+    link: "https://tvastrahealthcare.vercel.app/",
     tech: ["ExpressJs", "MongoDB", "Passport", "EJS", "Vanilla JavaScript"],
     footerLink: {
       github: "https://github.com/idk-Mohit/Tvastra",
-      deploy: "https://tvastrahealthcare.cyclic.app/",
+      deploy: "https://tvastrahealthcare.vercel.app/",
     },
     description:
       "A web app for all medical help in one place. Search for doctors, hospitals, and treatments. A clean and interactive UI. Login for more functionality such as book an appointment, see your schedules or consult online.",

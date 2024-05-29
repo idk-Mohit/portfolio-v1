@@ -28,7 +28,7 @@ export const jobs = [
   {
     name: "agconsultant",
     title: "Backend Developer",
-    link: "https://agconsultancy.cyclic.app/",
+    link: "https://agconsultancy.vercel.app/",
     linkText: "AG Consultant",
     date: "August - October 2021",
     description: [
@@ -41,7 +41,7 @@ export const jobs = [
   {
     name: "tvastra",
     title: "Full Stack Developer",
-    link: "https://tvastrahealthcare.cyclic.app/",
+    link: "https://tvastrahealthcare.vercel.app/",
     linkText: "Training",
     date: "April - May 2021",
     description: [
