@@ -6,7 +6,7 @@ module.exports = {
     image: "favicon-32x32.png",
   },
   flags: {
-    DEV_SSR: true,
+    DEV_SSR: false,
   },
   plugins: [
     "gatsby-plugin-styled-components",
