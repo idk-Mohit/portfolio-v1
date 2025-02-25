@@ -1,16 +1,31 @@
 const tech = [
-  "JavaScript (ES5+)",
+  // Frontend
+  "JavaScript (ES6+)",
+  "TypeScript",
   "React",
   "Redux",
-  "NodeJs",
-  "ExpressJs",
+  "Material-UI",
+  "Micro-Frontend Architecture",
+
+  // Backend
+  "Node.js",
+  "Express.js",
+  "SQL (MySQL)",
+
+  // DevOps & Tooling
   "Git",
-  "TypeScript",
+  "Docker",
+  "Webpack",
+  "Vite",
+  // "Module Federation",
+  // "Jest",
+
+  // Data Visualization
   "D3.js",
-  "Recoil",
-  "MongoDB",
-  "DevExtreme",
-  "Sass",
+
+  // Performance & Optimization
+  // "Web Performance Optimization",
+  // "Static Site Generation (SSG)",
 ];
 
 export default tech;

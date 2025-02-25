@@ -13,13 +13,25 @@ const Home = () => {
   }, []);
   const one = <span className="green greeting">Hi, my name is</span>;
   const two = <h1 className="lgray">Mohit.</h1>;
-  const three = <h2 className="gray">I build things for the web.</h2>;
+  const three = (
+    <h2 className="gray">
+      I craft seamless, high-performance web experiences.
+    </h2>
+  );
   const four = (
     <Brief>
-      Passionate frontend developer adept at creating lightning-fast, visually
-      appealing web experiences. Skilled in translating designs into clean,
-      efficient code, solving complex UI challenges.{" "}
-      <strong>Open for Work</strong>.
+      Passionate Full-Stack Developer, blending creativity with efficiency to
+      build blazing-fast, visually stunning interfaces. Adept at solving complex
+      UI/UX challenges and architecting scalable web solutions.{" "}
+      <span className="green">Always open for exciting opportunities</span>.
+      Currently working at
+      <a
+        href="https://www.e-pspl.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong> PSPL</strong>.
+      </a>
     </Brief>
   );
   const five = (
@@ -64,6 +76,7 @@ const Container = styled.section`
     font-weight: 800;
     letter-spacing: none;
     margin-top: -10px;
+    font-size: var(--font-sub-heading);
   }
   div {
     line-height: 1;
@@ -74,6 +87,9 @@ const Container = styled.section`
   .greeting {
     font-size: var(--font-note);
     font-family: var(--font-mono);
+  }
+  strong:hover {
+    color: var(--bg-green);
   }
 `;
 

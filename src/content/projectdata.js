@@ -45,6 +45,6 @@ export const Projects = [
       deploy: "https://shree-jewellers.netlify.app/",
     },
     description:
-      "A Complete Amazon Clone built with ReactJs, Redux and Serverless. Search for products, add them to your cart and that's it. It's a clone, It doesn't let you buy stuff.",
+      "A complete jewelry e-commerce platform built with ReactJs. Browse stunning jewelry collections, add items to your cart, and explore a smooth shopping experience. The app features a sleek, modern UI, interactive animations, and a fully functional cart system for seamless navigation.",
   },
 ];

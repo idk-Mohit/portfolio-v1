@@ -1,10 +1,24 @@
 export const jobs = [
   {
+    name: "pcsolution",
+    title: "Software Engineer",
+    link: "https://www.e-pspl.com/",
+    linkText: "PC Solution",
+    date: "August 2024 - Present (Full-time)",
+    description: [
+      "Building scalable, high-performance full-stack applications with the MERN stack, delivering seamless and intuitive user experiences.",
+      "Enhancing security and access management with MSAL authentication and JWT while optimizing backend efficiency with Express.js and SQL.",
+      "Crafting dynamic, responsive UIs using React, TypeScript, and MUI, ensuring speed, accessibility, and modern aesthetics.",
+      "Driving modularity and maintainability with micro-frontend architecture while leading two projects end-to-end.",
+      "Mastering and applying cutting-edge technologies, including authentication protocols, scalable system design, frontend architecture, and high-performance API development.",
+    ],
+  },
+  {
     name: "exalens",
     title: "Front-end Engineer",
     link: "https://www.exalens.com/",
     linkText: "EXALENS",
-    date: "March - December 2023",
+    date: "March - February 2024 (Full-time)",
     description: [
       "Engineered real-time cybersecurity dashboards with React, D3.js (custom charts), and Devextreme, enabling proactive threat analysis via interactive, high-performance visualizations.",
       "Optimized data visualization performance for massive datasets, significantly reducing rendering time and improving responsiveness through code splitting and other techniques.",
@@ -17,7 +31,7 @@ export const jobs = [
     title: "Front-end Developer",
     link: "https://shree-jewellers.netlify.app/",
     linkText: "Shree Jewellers",
-    date: "March - April 2022",
+    date: "March - April 2022 (Freelance)",
     description: [
       "Communicated with the client to understand the requirements.",
       "Built trending UI, utilizing ReactJs, StyledComponents, MaterailUI and Swiper.",
@@ -30,7 +44,7 @@ export const jobs = [
     title: "Backend Developer",
     link: "https://agconsultancy.vercel.app/",
     linkText: "AG Consultant",
-    date: "August - October 2021",
+    date: "August - October 2021 (Freelance)",
     description: [
       "Wrote clean, scalable, and comprehensible code.",
       "Built several REST APIs covering login, signup and User Panel Requests and Responses.",
@@ -43,7 +57,7 @@ export const jobs = [
     title: "Full Stack Developer",
     link: "https://tvastrahealthcare.vercel.app/",
     linkText: "Training",
-    date: "April - May 2021",
+    date: "April - May 2021 (Apprenticeship)",
     description: [
       "Developed and implemented scalable back-end, employing MongoDb, ExpressJs and PassportJs.",
       "Built User Panel and REST APIs performing several functions throughout the website.",
