@@ -20,7 +20,8 @@ const Home = () => {
   );
   const four = (
     <Brief>
-      Full-Stack Developer, blending creativity with efficiency to build
+      Full-Stack Developer with <span className="green">2.5</span> years of
+      professional experience, blending creativity with efficiency to build
       blazing-fast, visually stunning interfaces. Adept at solving complex UI/UX
       challenges and architecting scalable web solutions.{" "}
       <span className="green">Always open for exciting opportunities</span>.
