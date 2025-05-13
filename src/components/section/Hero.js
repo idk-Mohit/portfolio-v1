@@ -23,9 +23,10 @@ const Home = () => {
       Full-Stack Developer with <span className="green">2.5</span> years of
       professional experience, blending creativity with efficiency to build
       blazing-fast, visually stunning interfaces. Adept at solving complex UI/UX
-      challenges and architecting scalable web solutions.{" "}
-      <span className="green">Always open for exciting opportunities</span>.
-      Currently working at
+      challenges and architecting scalable web solutions.
+      <br />
+      <span className="green">Open for exciting opportunities</span>. Currently
+      working at
       <a
         href="https://www.e-pspl.com/"
         target="_blank"
