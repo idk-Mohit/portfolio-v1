@@ -5,12 +5,12 @@ const tech = [
   "React",
   "Redux",
   "Material-UI",
-  "Micro-Frontend Architecture",
+  // "Micro-Frontend Architecture",
 
   // Backend
   "Node.js",
   "Express.js",
-  "SQL (MySQL)",
+  "SQL",
 
   // DevOps & Tooling
   "Git",

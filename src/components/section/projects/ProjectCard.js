@@ -62,6 +62,20 @@ const ProjectCard = () => {
                 </span>
               </a>
             </li>
+            {index === 2 ? (
+              <li>
+                <a
+                  href={deploy}
+                  target="_blank"
+                  aria-label={item.linkText}
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <Icons name="external" />
+                  </span>
+                </a>
+              </li>
+            ) : null}
           </FooterLinks>
         </Content>
         <ImageContainer className="project-image">

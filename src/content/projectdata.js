@@ -5,9 +5,24 @@ import {
   TvastraImageSmall,
   ShreeJewellerImage,
   ShreeJewellerImageSmall,
+  PlugNPlayImage,
+  PlugNPlayImageSmall,
 } from "../images/index";
 
 export const Projects = [
+  {
+    linkText: "Plug-n-Play (WIP)",
+    image: PlugNPlayImage,
+    smallImage: PlugNPlayImageSmall,
+    link: "https://plug-n-play-six.vercel.app/",
+    tech: ["React", "D3.js", "Jotai", "Tailwind", "Vite", "Wasm", "Rust"],
+    footerLink: {
+      github: "https://github.com/idk-Mohit/",
+      deploy: "https://plug-n-play-six.vercel.app/",
+    },
+    description:
+      "In-browser data visualization tool. Parses 100k+ rows instantly with no backend. Privacy-first, performance-focused. (WIP)",
+  },
   {
     linkText: "Amazon Clone",
     image: AmazonImage,
